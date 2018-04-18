@@ -1,0 +1,11 @@
+resources:
+- name: ise-pipeline
+  type: git
+  source:
+    uri: https://github.com/wolfoo2931/concourse-ci-hello-world.git
+
+jobs:
+- name: upgrade-psn
+  plan:
+  - task: deploy
+    file: ise-pipeline/tasks/upgrade-psn/task.yml
