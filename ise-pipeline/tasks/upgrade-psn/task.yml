@@ -10,4 +10,4 @@ inputs:
   - name: ise-pipeline
 
 run:
-  path: pcf-pipelines/tasks/upgrade-psn/task.sh
+  path: ise-pipeline/tasks/upgrade-psn/task.sh

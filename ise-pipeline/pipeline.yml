@@ -1,11 +1,14 @@
 resources:
-- name: ise-pipeline
+- name: ise-concourse
   type: git
   source:
-    uri: https://github.com/wolfoo2931/concourse-ci-hello-world.git
+    uri: git@github.com:MaheshRudrachar/ise-concourse.git
+    branch: master
+    private_key: {{git_private_key}}
 
 jobs:
 - name: upgrade-psn
   plan:
+  - get: ise-concourse
   - task: deploy
     file: ise-pipeline/tasks/upgrade-psn/task.yml
